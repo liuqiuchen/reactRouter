@@ -7,7 +7,7 @@ import Repo from './modules/Repo';
 import Home from './modules/Home';
 
 render((
-    /*package.json 的 script里面需要配置*/
+    /*package.json 的 script里面需要配置 --history-api-fallback */
         <Router history={browserHistory} location="hash">
             <Route path="/" component={App}>
 

@@ -12,7 +12,13 @@
     "webpack-dev-server": "^1.16.2"
   },
   "scripts": {
-    "start": "webpack --watch",
-    "build": "webpack && webpack-dev-server --port 3000 --inline --hot --content-base . --history-api-fallback"
+    "start": "if-env NODE_ENV=production && cnpm run start:prod || cnpm run start:dev",
+    "start:dev": "webpack-dev-server --inline --hot --content-base . --history-api-fallback",
+    "start:prod": "webpack && node server.js"
+  },
+  "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "if-env": "^1.0.0"
   }
 }

@@ -4,7 +4,9 @@ module.exports = {
     entry: './index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        /*配置 node 环境*/
+        publicPath: '/'
     },
     module: {
         loaders: [
